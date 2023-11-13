@@ -15,6 +15,14 @@ guesses = ""
 # Counter of turns
 turns = 7
 
+# while loop to check number of tries versus number of turns
 while turns > 0:
     # failed counter
     failed = 0
+
+    if char in guesses:
+        print(char,end="")
+
+        else:
+            print("_",end="")
+            failed += 1
