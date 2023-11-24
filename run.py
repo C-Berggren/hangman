@@ -1,10 +1,16 @@
+# Random module that randomises the words for the game
 import random
+# importing the wordlist.py to be used in the game
 from wordlist import word_list
 
+
+# Defined word to be chosen from wordlist and making the words uppercase
 def get_word():
     word = random.choice(word_list)
     return word.upper()
 
+
+# Defining the play function
 def play(word):
     word_completion = "_" * len(word)
     guessed = False
