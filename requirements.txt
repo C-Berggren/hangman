@@ -1,1 +1,1 @@
-# Your requirements go here
+# List of 100 words for hangman
