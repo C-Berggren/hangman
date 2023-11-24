@@ -103,10 +103,12 @@ word_list = [
     'industry'
     'two'
 ]
+test_word = "snickers"
 
 failed = 7
-letter_count = ""
-word = random.choice(word_list)
+letter_counter = ""
+word = test_word
+failed_counter = 0
 
 # Player's username
 user_name = input("Your name: ")
@@ -114,14 +116,23 @@ user_name = input("Your name: ")
 print(f"Welcome {user_name}! Let's play!")
 
 while failed > 0:
-    guess = input("Guess a letter: ")
+    guess = input(" Guess a letter: \n")
 
     if guess in word:
-        print(f"Correct. There is one or more {guess} in the word")
+        print(f"Correct. There is one or more {guess} in the word\n")
     else:
         failed -= 1
-        print(f"Incorrect. There is no {guess} in the word")
+        print(f"Incorrect. There is no {guess} in the word. {failed} turn(s) left\n")
 
-    letter_count = letter_count + guess
+    letter_counter = letter_counter + guess
 
     for letter in word:
+        if letter in letter_counter:
+            print(f"{letter}", end="")
+        else:
+            print("_", end="")
+            failed_counter += 1
+
+    if failed_counter == 0:
+        print(f"You did it {user_name}! You saved me! The word was: \n{word}")
+        break
