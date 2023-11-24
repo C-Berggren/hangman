@@ -1,5 +1,5 @@
 # List of 100 words for hangman
-wordlist = [
+word_list = [
     'meat'
     'waggish'
     'unit'
@@ -99,4 +99,5 @@ wordlist = [
     'breathe'
     'parched'
     'industry'
-    'two']
+    'two'
+]

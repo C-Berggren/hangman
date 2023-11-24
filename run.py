@@ -17,8 +17,11 @@ def play(word):
     guessed_letters = []
     guessed_words = []
     tries = 7
-
-# Player's username
-user_name = input("Your name: ")
-print(f"Welcome {user_name}! Let's play!")
-print("Start playing! Choose your first letter. You have 7 tries before x_x")
+    # Player's username
+    user_name = input("Your name: ")
+    print(f"Welcome {user_name}! Let's play!")
+    print(display_hangman(tries))
+    print(word_completion)
+    print("\n")
+    while not guessed and tries > 0:
+        guess = input("Start playing! Choose your first letter. You have 7 tries before x_x")
