@@ -104,8 +104,24 @@ word_list = [
     'two'
 ]
 
+failed = 7
+letter_count = ""
+word = random.choice(word_list)
+
 # Player's username
 user_name = input("Your name: ")
 # Printing the Start gameplay
 print(f"Welcome {user_name}! Let's play!")
-    
+
+while failed > 0:
+    guess = input("Guess a letter: ")
+
+    if guess in word:
+        print(f"Correct. There is one or more {guess} in the word")
+    else:
+        failed -= 1
+        print(f"Incorrect. There is no {guess} in the word")
+
+    letter_count = letter_count + guess
+
+    for letter in word:
