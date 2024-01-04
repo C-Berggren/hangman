@@ -103,7 +103,6 @@ word_list = [
     'industry',
     'two',
 ]
-test_word = "snickers"
 
 failed = 6
 letter_counter = ""
