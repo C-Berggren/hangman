@@ -105,7 +105,7 @@ word_list = [
 ]
 test_word = "snickers"
 
-failed = 7
+failed = 6
 letter_counter = ""
 word = (random.choice(word_list))
 failed_counter = 0
@@ -134,14 +134,14 @@ while failed > 0:
 
     for letter in word:
         if letter in letter_counter:
-            print(f"{letter}", end=" ")
+            print(f"{letter}", end="")
         else:
-            print("_", end=" ")
+            print("_", end="")
             failed_counter += 1
 
-            if failed_counter == 0:
-                print(f"You did it {user_name}! You saved me! The word was: \n{word}")
-            elif failed_counter == 7:
-                print(f" That was wrong, {user_name}. Better luck next time!")
-        break
+        if failed_counter == 0:
+            print(f"You did it {user_name}! You saved me! The word was: \n{word}")
+        elif failed == 0:
+            print(f"That was wrong, {user_name}. Better luck next time!")
+            break
             
